@@ -1,66 +1,64 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import { FaExternalLinkAlt } from "react-icons/fa";
 
 const projectsData = [
   {
-    title: "Indak Dangal Hub",
-    description: "A web-based scheduling and availability management system for university dance organization",
-    url: "https://example.com/indak"
+    title: "NoteSphere",
+    description: "A JavaScript-powered notes web app built to practice dynamic UI and state management. Features include creating, editing, and organizing notes with an intuitive interface.",
+    url: "https://github.com/ashdejesus"
   },
   {
-    title: "SafeRide",
-    description: "GPS and sensor data collection system for identifying unsafe driving behaviors",
-    url: "https://example.com/saferide"
+    title: "unicart",
+    description: "A JavaScript e-commerce and cart prototype demonstrating interactive DOM manipulation and client-side logic for product management and shopping cart functionality.",
+    url: "https://github.com/ashdejesus"
   },
   {
-    title: "Portfolio Website",
-    description: "Personal portfolio showcasing projects and skills",
-    url: "https://example.com/portfolio"
+    title: "sulatinmo",
+    description: "An HTML site project showcasing static markup, layout design, and content presentation skills with clean semantic HTML structure.",
+    url: "https://github.com/ashdejesus"
   },
   {
-    title: "AI Learning Platform",
-    description: "Interactive platform for learning AI concepts and building projects",
-    url: "https://example.com/ai-platform"
+    title: "cultura-lens",
+    description: "A TypeScript-based project tied to image restoration concepts, demonstrating type safety and modern JavaScript development practices.",
+    url: "https://github.com/ashdejesus"
   }
 ];
 
 export default function Projects() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="bg-white rounded-lg border border-gray-200 p-6 space-y-4"
-    >
-      <h2 className="text-xl font-bold text-gray-900 flex items-center gap-2">
-        <span className="text-2xl">💼</span> Recent Projects
-      </h2>
+    <section className="bento-card p-4 space-y-4 group md:col-span-6">
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center gap-2">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          <h2 className="text-xl md:text-2xl font-bold text-foreground">Recent Projects</h2>
+        </div>
+        <a href="#" className="text-primary text-xs font-medium">View All ›</a>
+      </div>
 
       <div className="grid md:grid-cols-2 gap-4">
         {projectsData.map((project, idx) => (
-          <motion.a
+          <a
             key={idx}
             href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ y: -4 }}
-            className="group p-4 bg-gray-50 hover:bg-gray-100 border border-gray-200 hover:border-blue-300 rounded-lg transition-all"
+            className="group p-4 bg-muted/5 hover:bg-muted/10 border border-border hover:border-primary rounded-lg transition-all"
           >
-            <div className="flex items-start justify-between gap-3 mb-2">
-              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors text-sm">
+            <div className="flex items-start justify-between gap-2 mb-2">
+              <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors text-sm">
                 {project.title}
               </h3>
-              <FaExternalLinkAlt className="text-gray-400 group-hover:text-blue-600 flex-shrink-0 transition-colors text-xs" />
+              <svg className="w-4 h-4 text-muted group-hover:text-primary flex-shrink-0 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
             </div>
-            <p className="text-gray-600 text-sm leading-relaxed">
+            <p className="text-foreground/70 text-xs leading-relaxed">
               {project.description}
             </p>
-          </motion.a>
+          </a>
         ))}
       </div>
-    </motion.div>
+    </section>
   );
 }

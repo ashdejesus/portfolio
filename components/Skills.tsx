@@ -1,100 +1,39 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import {
-  SiJavascript,
-  SiTypescript,
-  SiReact,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiNodedotjs,
-  SiPostgresql,
-  SiMongodb
-} from "react-icons/si";
-
-const skillsData = {
-  Frontend: [
-    { name: "JavaScript", icon: SiJavascript },
-    { name: "TypeScript", icon: SiTypescript },
-    { name: "React", icon: SiReact },
-    { name: "Next.js", icon: SiNextdotjs },
-    { name: "Tailwind CSS", icon: SiTailwindcss }
-  ],
-  Backend: [
-    { name: "Node.js", icon: SiNodedotjs },
-    { name: "PostgreSQL", icon: SiPostgresql },
-    { name: "MongoDB", icon: SiMongodb }
-  ]
-};
 
 export default function Skills() {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="bg-white rounded-lg border border-gray-200 p-6 space-y-6"
-    >
-      <h2 className="text-xl font-bold text-gray-900 flex items-center gap-2">
-        <span className="text-2xl">⚙️</span> Tech Stack
-      </h2>
+  const skills = {
+    Frontend: ["JavaScript", "HTML", "CSS", "React", "Tailwind CSS"],
+    "Libraries & Frameworks": ["React", "Tailwind CSS"],
+    "Backend & Tools": ["Firebase", "Supabase", "Git", "GitHub"],
+    Languages: ["JavaScript", "Java"],
+    Additional: ["RESTful APIs", "Responsive UI", "Project Workflows"]
+  };
 
-      <div className="space-y-5">
-        {Object.entries(skillsData).map(([category, skills]) => (
+  return (
+    <section className="bento-card p-4 space-y-2 group md:col-span-2">
+      <div className="flex items-center gap-2">
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+        </svg>
+        <h2 className="text-lg font-bold">Tech Stack</h2>
+      </div>
+
+      <div className="space-y-3 mt-3">
+        {Object.entries(skills).map(([category, techs]) => (
           <div key={category}>
-            <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wide mb-3">
-              {category}
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {skills.map((skill) => {
-                const IconComponent = skill.icon;
-                return (
-                  <div
-                    key={skill.name}
-                    className="flex items-center gap-2 bg-gray-100 hover:bg-gray-200 px-3 py-2 rounded-lg text-sm text-gray-800 transition-colors"
-                  >
-                    <IconComponent className="text-base" />
-                    <span>{skill.name}</span>
-                  </div>
-                );
-              })}
+            <h3 className="text-xs font-semibold mb-1.5 text-foreground">{category}</h3>
+            <div className="flex flex-wrap gap-1.5">
+              {techs.map((tech) => (
+                <span key={tech} className="px-2 py-0.5 text-xs rounded-md bg-foreground/5 border border-foreground/10">
+                  {tech}
+                </span>
+              ))}
             </div>
           </div>
         ))}
       </div>
-
-      {/* Achievement Banner */}
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-5 text-white space-y-2">
-        <div className="text-sm font-semibold">I&apos;M PART OF</div>
-        <div className="text-3xl font-bold">PH<span className="text-yellow-300">/</span>100</div>
-        <p className="text-xs opacity-90">
-          PH100 is the annual list of the brightest minds under 30 in the Philippines
-        </p>
-      </div>
-
-      {/* Experience */}
-      <div className="space-y-3">
-        <h3 className="text-sm font-semibold text-gray-900 flex items-center gap-2">
-          <span>💼</span> Experience
-        </h3>
-        <div className="space-y-3">
-          {[
-            { title: "Computer Science Student", org: "University", year: "2023" },
-            { title: "Web Development Intern", org: "Tech Company", year: "2024" },
-            { title: "Dean&apos;s Lister", org: "Academic Achievement", year: "2024" }
-          ].map((exp, idx) => (
-            <div key={idx} className="flex items-start gap-3 pb-3 border-b border-gray-200 last:border-b-0">
-              <span className="text-blue-600 text-xl flex-shrink-0">•</span>
-              <div className="flex-1 min-w-0">
-                <p className="font-semibold text-gray-900 text-sm">{exp.title}</p>
-                <p className="text-gray-600 text-xs">{exp.org}</p>
-                <p className="text-blue-600 font-medium text-xs">{exp.year}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </motion.div>
+    </section>
   );
 }

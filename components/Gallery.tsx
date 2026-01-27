@@ -7,7 +7,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 const images = [
   { id: 1, emoji: "📸", label: "Photo 1" },
   { id: 2, emoji: "🌟", label: "Photo 2" },
-  { id: 3, emoji: "�", label: "Photo 3" },
+  { id: 3, emoji: "🎤", label: "Photo 3" },
   { id: 4, emoji: "🏆", label: "Photo 4" },
   { id: 5, emoji: "👥", label: "Photo 5" }
 ];
@@ -28,15 +28,15 @@ export default function Gallery() {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-white rounded-lg border border-gray-200 p-6 space-y-4"
+      className="bg-background rounded-lg border border-border p-5 space-y-4"
     >
-      <h2 className="text-xl font-bold text-gray-900 flex items-center gap-2">
-        <span className="text-2xl">🖼️</span> Gallery
+      <h2 className="text-base font-bold text-foreground">
+        Gallery
       </h2>
 
       <div className="relative">
         {/* Images Container */}
-        <div className="w-full h-80 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg overflow-hidden border border-gray-200 flex items-center justify-center">
+        <div className="w-full h-64 bg-gradient-to-br from-muted/20 to-muted/40 rounded-lg overflow-hidden border border-border flex items-center justify-center">
           <motion.div
             key={currentIndex}
             initial={{ opacity: 0 }}
@@ -44,27 +44,27 @@ export default function Gallery() {
             transition={{ duration: 0.3 }}
             className="flex items-center justify-center w-full h-full"
           >
-            <div className="text-9xl">{images[currentIndex].emoji}</div>
+            <div className="text-8xl">{images[currentIndex].emoji}</div>
           </motion.div>
         </div>
 
         {/* Navigation Buttons */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-100 text-gray-600 hover:text-gray-900 p-3 rounded-full shadow-lg transition-all z-10"
+          className="absolute left-2 top-1/2 -translate-y-1/2 bg-background hover:bg-muted text-foreground/70 hover:text-foreground p-2 rounded-full shadow-md transition-all z-10"
         >
-          <FaChevronLeft className="text-lg" />
+          <FaChevronLeft className="text-sm" />
         </button>
 
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-100 text-gray-600 hover:text-gray-900 p-3 rounded-full shadow-lg transition-all z-10"
+          className="absolute right-2 top-1/2 -translate-y-1/2 bg-background hover:bg-muted text-foreground/70 hover:text-foreground p-2 rounded-full shadow-md transition-all z-10"
         >
-          <FaChevronRight className="text-lg" />
+          <FaChevronRight className="text-sm" />
         </button>
 
         {/* Slide Counter */}
-        <div className="text-center mt-4 text-gray-600 text-sm">
+        <div className="text-center mt-3 text-foreground/60 text-xs">
           {currentIndex + 1} / {images.length}
         </div>
       </div>

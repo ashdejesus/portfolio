@@ -5,11 +5,11 @@
 :root {
   --background: #ffffff;
   --foreground: #1a1a1a;
-  --primary: #2563eb;
+  --primary: #0084ff;
   --secondary: #7c3aed;
   --accent: #0891b2;
-  --border: #e5e7eb;
-  --muted: #6b7280;
+  --border: #e0e0e0;
+  --muted: #999999;
 }
 
 * {
@@ -51,6 +51,38 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
   }
+
+  .bento-card {
+    @apply bg-background rounded-lg border border-border transition-all duration-200;
+  }
+
+  .bento-card:hover {
+    @apply border-border;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
 }
 
 @layer base {
@@ -69,6 +101,44 @@ body {
   p {
     @apply text-base leading-relaxed;
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-slide-show {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  5% {
+    opacity: 1;
+    visibility: visible;
+  }
+  95% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes dot-fade {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;  }
 }
 
 /* Custom scrollbar */

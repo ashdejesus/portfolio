@@ -9,14 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0a0a0a",
-        foreground: "#ededed",
-        primary: "#3b82f6",
-        secondary: "#8b5cf6",
-        accent: "#06b6d4",
+        background: "#ffffff",
+        foreground: "#1a1a1a",
+        primary: "#0084ff",
+        secondary: "#7c3aed",
+        accent: "#0891b2",
+        border: "#e0e0e0",
       },
       fontFamily: {
-        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'sans-serif'],
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-out",
