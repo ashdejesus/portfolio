@@ -46,25 +46,25 @@ export default function Experience() {
         <h2 className="text-lg font-bold">Experience</h2>
       </div>
 
-      <div className="relative space-y-3 mt-3">
+      <div className="relative space-y-10 mt-3">
         <div className="absolute left-1.5 top-2 bottom-0 w-px bg-border"></div>
 
         {experiences.map((exp, index) => (
           <div key={index} className="relative pl-6 group">
-            <div className={`absolute left-0 top-1.5 w-3 h-3 rounded-full border-2 transition-colors ${
+            <div className={`absolute left-0 top-1.5 w-3 h-3 rounded-full border-2 transition-all duration-300 ${
               index === 0 
-                ? "border-accent bg-accent" 
-                : "border-border bg-background group-hover:bg-accent"
+                ? "border-black bg-black" 
+                : "border-border bg-background hover:border-black hover:bg-black"
             }`}></div>
             <div className="space-y-0.5">
-              <h3 className={`text-xs font-semibold transition-colors ${
-                index === 0 ? "text-accent" : "group-hover:text-accent"
+              <h3 className={`text-sm font-semibold transition-colors ${
+                index === 0 ? "text-black" : "group-hover:text-black"
               }`}>
                 {exp.title}
               </h3>
               <div className="flex items-center justify-between gap-2">
-                <span className="text-[10px] text-foreground/70">{exp.organization}</span>
-                <span className="text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-foreground/5 border border-foreground/10 flex-shrink-0">
+                <span className="text-xs text-foreground/70">{exp.organization}</span>
+                <span className="text-xs font-mono px-1.5 py-0.5 rounded-full bg-foreground/5 border border-foreground/10 flex-shrink-0">
                   {exp.year}
                 </span>
               </div>

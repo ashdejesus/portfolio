@@ -35,7 +35,7 @@ export default function Projects() {
           </svg>
           <h2 className="text-xl md:text-2xl font-bold text-foreground">Recent Projects</h2>
         </div>
-        <a href="#" className="text-primary text-xs font-medium">View All ›</a>
+        <a href="#" className="text-black text-xs font-medium">View All ›</a>
       </div>
 
       <div className="grid md:grid-cols-2 gap-4">
@@ -43,13 +43,13 @@ export default function Projects() {
           <a
             key={idx}
             href={project.url}
-            className="group p-4 bg-muted/5 hover:bg-muted/10 border border-border hover:border-primary rounded-lg transition-all"
+            className="group p-4 bg-muted/5 hover:bg-muted/10 border border-border hover:border-black rounded-lg transition-all"
           >
             <div className="flex items-start justify-between gap-2 mb-2">
-              <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors text-sm">
+              <h3 className="font-semibold text-foreground group-hover:text-black transition-colors text-sm">
                 {project.title}
               </h3>
-              <svg className="w-4 h-4 text-muted group-hover:text-primary flex-shrink-0 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 text-muted group-hover:text-black flex-shrink-0 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </div>

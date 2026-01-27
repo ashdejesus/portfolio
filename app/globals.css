@@ -5,9 +5,9 @@
 :root {
   --background: #ffffff;
   --foreground: #1a1a1a;
-  --primary: #0084ff;
+  --primary: #000000;
   --secondary: #7c3aed;
-  --accent: #0891b2;
+  --accent: #000000;
   --border: #e0e0e0;
   --muted: #999999;
 }
@@ -40,7 +40,7 @@ body {
   }
   
   .glow {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   }
   
   .card-hover {
@@ -49,7 +49,7 @@ body {
   
   .card-hover:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   }
 
   .bento-card {
@@ -57,11 +57,21 @@ body {
   }
 
   .bento-card:hover {
-    @apply border-border;
+    @apply border-black/20 shadow-lg;
   }
 
   .animate-fade-in {
-    animation: fadeIn 0.5s ease-in-out forwards;
+    animation: fadeIn 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
     opacity: 0;
   }
 
@@ -87,6 +97,14 @@ body {
 
   .animation-delay-600 {
     animation-delay: 600ms;
+  }
+
+  .animation-delay-700 {
+    animation-delay: 700ms;
+  }
+
+  .animation-delay-800 {
+    animation-delay: 800ms;
   }
 }
 
@@ -116,6 +134,68 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
   }
 }
 
