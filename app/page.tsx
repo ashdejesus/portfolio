@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import Achievements from "@/components/Achievements";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
@@ -12,64 +13,69 @@ import Recommendations from "@/components/Recommendations";
 export default function Home() {
   return (
     <main className="min-h-screen bg-background animate-fade-in">
-      <div className="max-w-4xl mx-auto px-4 py-8">
+      <div className="max-w-6xl mx-auto px-4 py-8">
         {/* Hero Section - Full Width */}
         <section className="mb-8 animate-fade-in">
           <Hero />
         </section>
 
-        {/* Bento Grid Layout - 6 columns */}
-        <section className="grid grid-cols-1 md:grid-cols-6 gap-2">
-          {/* About - 4 cols */}
-          <div className="col-span-1 md:col-span-4 animate-fade-in">
+        {/* Achievements Section - Full Width */}
+        <section className="mb-8 animate-fade-in animation-delay-100">
+          <Achievements />
+        </section>
+
+        {/* Two Column Layout */}
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          {/* Left Column - About (2 cols) */}
+          <div className="md:col-span-2 animate-fade-in">
             <About />
           </div>
 
-          {/* Experience - 2 cols */}
-          <div className="col-span-1 md:col-span-2 animate-fade-in animation-delay-200">
+          {/* Right Column - Experience (1 col) */}
+          <div className="animate-fade-in animation-delay-200">
             <Experience />
           </div>
+        </section>
 
-          {/* Tech Stack - 4 cols */}
-          <div className="col-span-1 md:col-span-4 animate-fade-in animation-delay-200">
-            <Skills />
-          </div>
+        {/* Tech Stack - Full Width */}
+        <section className="mb-8 animate-fade-in animation-delay-200">
+          <Skills />
+        </section>
 
-          {/* Beyond Coding - 2 cols */}
-          <div className="col-span-1 md:col-span-2 animate-fade-in animation-delay-300">
-            <BeyondCoding />
-          </div>
+        {/* Beyond Coding - Full Width */}
+        <section className="mb-8 animate-fade-in animation-delay-300">
+          <BeyondCoding />
+        </section>
 
-          {/* Recent Projects - 6 cols */}
-          <div className="col-span-1 md:col-span-6 animate-fade-in animation-delay-300">
-            <Projects />
-          </div>
+        {/* Recent Projects - Full Width */}
+        <section className="mb-8 animate-fade-in animation-delay-300">
+          <Projects />
+        </section>
 
-          {/* Certifications - 3 cols */}
-          <div className="col-span-1 md:col-span-3 animate-fade-in animation-delay-400">
+        {/* Certifications & Recommendations */}
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div className="animate-fade-in animation-delay-400">
             <RecentCertifications />
           </div>
-
-          {/* Recommendations - 3 cols */}
-          <div className="col-span-1 md:col-span-3 overflow-hidden animate-fade-in animation-delay-400">
+          <div className="overflow-hidden animate-fade-in animation-delay-400">
             <Recommendations />
           </div>
+        </section>
 
-          {/* Contact/Links - 6 cols */}
-          <div className="col-span-1 md:col-span-6 animate-fade-in animation-delay-500">
-            <Contact />
-          </div>
+        {/* Contact/Links - Full Width */}
+        <section className="mb-8 animate-fade-in animation-delay-500">
+          <Contact />
+        </section>
 
-          {/* Gallery - 6 cols */}
-          <div className="col-span-1 md:col-span-6 animate-fade-in animation-delay-600">
-            <Gallery />
-          </div>
+        {/* Gallery - Full Width */}
+        <section className="mb-8 animate-fade-in animation-delay-600">
+          <Gallery />
         </section>
       </div>
 
-      <footer className="max-w-4xl mx-auto px-4 py-8 border-t border-border mt-12">
+      <footer className="max-w-6xl mx-auto px-4 py-8 border-t border-border mt-12">
         <div className="flex justify-center items-center">
-          <p className="text-sm text-foreground/70">© 2026 Bryl Lim. All rights reserved.</p>
+          <p className="text-sm text-foreground/70">© 2026 Nichoe Ashley De Jesus. All rights reserved.</p>
         </div>
       </footer>
     </main>

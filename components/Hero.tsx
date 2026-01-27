@@ -41,16 +41,36 @@ export default function Hero() {
             3rd Year Computer Science Student <span className="text-muted">\</span> Aspiring Full-Stack Developer
           </p>
 
-          {/* CTA Button */}
-          <a
-            href="mailto:dejesusnichoeashley81@gmail.com"
-            className="inline-flex h-7 md:h-8 items-center rounded-lg bg-foreground px-2.5 md:px-4 text-[8px] md:text-xs font-medium text-background transition-all duration-200 hover:bg-foreground/90 hover:-translate-y-0.5 gap-1 md:gap-1.5 whitespace-nowrap"
-          >
-            <svg className="w-3.5 h-3.5 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            <span>Contact Me</span>
-          </a>
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap gap-2 mt-4">
+            <a
+              href="#schedule"
+              className="inline-flex h-8 items-center rounded-lg bg-foreground px-3 md:px-4 text-[8px] md:text-xs font-medium text-background transition-all duration-200 hover:bg-foreground/90 hover:-translate-y-0.5 gap-1 md:gap-1.5 whitespace-nowrap"
+            >
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>Schedule a Call</span>
+            </a>
+            <a
+              href="mailto:dejesusnichoeashley81@gmail.com"
+              className="inline-flex h-8 items-center rounded-lg bg-background border border-foreground/20 px-3 md:px-4 text-[8px] md:text-xs font-medium text-foreground transition-all duration-200 hover:bg-foreground/5 gap-1 md:gap-1.5 whitespace-nowrap"
+            >
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span>Send Email</span>
+            </a>
+            <a
+              href="#community"
+              className="hidden md:inline-flex h-8 items-center rounded-lg bg-background border border-foreground/20 px-3 md:px-4 text-[8px] md:text-xs font-medium text-foreground transition-all duration-200 hover:bg-foreground/5 gap-1 md:gap-1.5 whitespace-nowrap"
+            >
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 6V4m6 2a2 2 0 11-4 0m4 0a2 2 0 11-4 0m6 0a2 2 0 11-4 0M3 20a6 6 0 0112 0v1H3v-1z" />
+              </svg>
+              <span>Visit my community and join the discussion here!</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>

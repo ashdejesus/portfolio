@@ -12,23 +12,18 @@ export default function Experience() {
   const experiences: ExperienceItem[] = [
     {
       title: "3rd Year Computer Science Student",
-      organization: "Currently Studying",
+      organization: "University / Academic Study",
       year: "2024",
     },
     {
-      title: "Full-Stack Web Development",
-      organization: "Self-Taught & Academic Projects",
+      title: "Full-Stack Developer (Learning)",
+      organization: "GitHub Projects & Self-Taught",
       year: "2023",
     },
     {
-      title: "Learning Web Technologies",
-      organization: "HTML, CSS, JavaScript, Laravel",
+      title: "Web Development Fundamentals",
+      organization: "HTML, CSS, JavaScript, React",
       year: "2022",
-    },
-    {
-      title: "Introduction to Programming",
-      organization: "Started Coding Journey",
-      year: "2021",
     },
   ];
 
