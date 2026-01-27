@@ -19,7 +19,7 @@ export default function Recommendations() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
-    <section className="bento-card p-4 space-y-2 group md:col-span-2">
+    <section className="bento-card p-4 space-y-2 group col-span-1 md:col-span-3">
       <div className="flex items-center gap-2 mb-4">
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />

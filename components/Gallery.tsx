@@ -1,15 +1,23 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import Image from "next/image";
 
 const images = [
-  { id: 1, emoji: "📸", label: "Photo 1" },
-  { id: 2, emoji: "🌟", label: "Photo 2" },
-  { id: 3, emoji: "🎤", label: "Photo 3" },
-  { id: 4, emoji: "🏆", label: "Photo 4" },
-  { id: 5, emoji: "👥", label: "Photo 5" }
+  "/gallery/gallery-1.png",
+  "/gallery/gallery-2.png",
+  "/gallery/gallery-3.png",
+  "/gallery/gallery-4.png",
+  "/gallery/gallery-5.png",
+  "/gallery/gallery-6.png",
+  "/gallery/gallery-7.png",
+  "/gallery/gallery-9.png",
+  "/gallery/gallery-10.png",
+  "/gallery/gallery-11.png",
+  "/gallery/gallery-12.png",
+  "/gallery/gallery-13.png",
+  "/gallery/gallery-14.png",
+  "/gallery/gallery-15.png"
 ];
 
 export default function Gallery() {
@@ -24,50 +32,52 @@ export default function Gallery() {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="bg-background rounded-lg border border-border p-5 space-y-4"
-    >
-      <h2 className="text-base font-bold text-foreground">
-        Gallery
-      </h2>
+    <div className="bento-card p-4 col-span-1 md:col-span-6 space-y-2 group">
+      <div className="flex items-center gap-2">
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+        </svg>
+        <h2 className="text-lg font-bold">Gallery</h2>
+      </div>
 
       <div className="relative">
-        {/* Images Container */}
-        <div className="w-full h-64 bg-gradient-to-br from-muted/20 to-muted/40 rounded-lg overflow-hidden border border-border flex items-center justify-center">
-          <motion.div
-            key={currentIndex}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-            className="flex items-center justify-center w-full h-full"
-          >
-            <div className="text-8xl">{images[currentIndex].emoji}</div>
-          </motion.div>
+        <div className="relative overflow-hidden">
+          <div className="flex gap-2 transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 0}px)` }}>
+            {images.map((img, idx) => (
+              <div key={idx} className="relative flex-shrink-0 aspect-square overflow-hidden rounded-lg bg-foreground/5 border border-foreground/10 hover:border-foreground/20 transition-all duration-200 hover:-translate-y-0.5 group/image" style={{ width: "calc((100% - 2rem) / 5)" }}>
+                <Image
+                  alt={`Gallery image ${idx + 1}`}
+                  src={img}
+                  fill
+                  className="object-cover transition-transform duration-200 group-hover/image:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Navigation Buttons */}
         <button
           onClick={prevSlide}
-          className="absolute left-2 top-1/2 -translate-y-1/2 bg-background hover:bg-muted text-foreground/70 hover:text-foreground p-2 rounded-full shadow-md transition-all z-10"
+          disabled={currentIndex === 0}
+          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 md:-translate-x-6 z-10 p-2 rounded-full bg-background border border-foreground/10 hover:border-foreground/20 hover:bg-foreground/5 transition-all duration-200 hover:scale-110 shadow-sm opacity-50 cursor-not-allowed"
+          aria-label="Previous image"
         >
-          <FaChevronLeft className="text-sm" />
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7"></path>
+          </svg>
         </button>
 
         <button
           onClick={nextSlide}
-          className="absolute right-2 top-1/2 -translate-y-1/2 bg-background hover:bg-muted text-foreground/70 hover:text-foreground p-2 rounded-full shadow-md transition-all z-10"
+          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 md:translate-x-6 z-10 p-2 rounded-full bg-background border border-foreground/10 hover:border-foreground/20 hover:bg-foreground/5 transition-all duration-200 hover:scale-110 shadow-sm"
+          aria-label="Next image"
         >
-          <FaChevronRight className="text-sm" />
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7"></path>
+          </svg>
         </button>
-
-        {/* Slide Counter */}
-        <div className="text-center mt-3 text-foreground/60 text-xs">
-          {currentIndex + 1} / {images.length}
-        </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
