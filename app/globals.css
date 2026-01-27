@@ -3,11 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --primary: #3b82f6;
-  --secondary: #8b5cf6;
-  --accent: #06b6d4;
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --primary: #2563eb;
+  --secondary: #7c3aed;
+  --accent: #0891b2;
+  --border: #e5e7eb;
+  --muted: #6b7280;
 }
 
 * {
@@ -23,8 +25,10 @@ html {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer utilities {
@@ -51,42 +55,42 @@ body {
 
 @layer base {
   h1 {
-    @apply text-5xl md:text-7xl font-bold;
+    @apply text-4xl md:text-6xl font-bold;
   }
   
   h2 {
-    @apply text-4xl md:text-5xl font-bold;
+    @apply text-3xl md:text-4xl font-bold;
   }
   
   h3 {
-    @apply text-2xl md:text-3xl font-semibold;
+    @apply text-xl md:text-2xl font-semibold;
   }
   
   p {
-    @apply text-base md:text-lg leading-relaxed;
+    @apply text-base leading-relaxed;
   }
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #f9fafb;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3b82f6;
-  border-radius: 5px;
+  background: #d1d5db;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2563eb;
+  background: #9ca3af;
 }
 
 /* Selection */
 ::selection {
-  background: rgba(59, 130, 246, 0.3);
-  color: #ededed;
+  background: rgba(37, 99, 235, 0.2);
+  color: #1a1a1a;
 }
