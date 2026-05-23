@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 const recommendationsData = [
   {
-    text: "Bryl and I worked together in various projects where I saw his tenacity to deliver what he promised to do. He is able to meet deadlines without sacrificing the quality of the output, and at times even exceeding the set goals. His dedication to pursue his craft and...",
+    text: "Bryl and I worked together on several projects where I witnessed his tenacity and reliability. He consistently met deadlines without sacrificing quality and often exceeded expectations. His dedication to his craft, eagerness to learn new technologies, and collaborative attitude made him a valuable member of the team. I highly recommend him for any software development role.",
     author: "Van Honoridez",
     role: "Application Development Analyst at Accenture"
   },

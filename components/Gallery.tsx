@@ -4,20 +4,21 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 const images = [
-  "/gallery/gallery-1.png",
-  "/gallery/gallery-2.png",
-  "/gallery/gallery-3.png",
-  "/gallery/gallery-4.png",
-  "/gallery/gallery-5.png",
-  "/gallery/gallery-6.png",
-  "/gallery/gallery-7.png",
-  "/gallery/gallery-9.png",
-  "/gallery/gallery-10.png",
-  "/gallery/gallery-11.png",
-  "/gallery/gallery-12.png",
-  "/gallery/gallery-13.png",
-  "/gallery/gallery-14.png",
-  "/gallery/gallery-15.png"
+  "/gallery/gallery-1.svg",
+  "/gallery/gallery-2.svg",
+  "/gallery/gallery-3.svg",
+  "/gallery/gallery-4.svg",
+  "/gallery/gallery-5.svg",
+  "/gallery/gallery-6.svg",
+  "/gallery/gallery-7.svg",
+  "/gallery/gallery-8.svg",
+  "/gallery/gallery-9.svg",
+  "/gallery/gallery-10.svg",
+  "/gallery/gallery-11.svg",
+  "/gallery/gallery-12.svg",
+  "/gallery/gallery-13.svg",
+  "/gallery/gallery-14.svg",
+  "/gallery/gallery-15.svg"
 ];
 
 export default function Gallery() {

@@ -164,7 +164,8 @@ This portfolio is optimized for performance:
 **Nichoe Ashley De Jesus**
 - Email: dejesusnichoeashley81@gmail.com
 - GitHub: [@ashdejesus](https://github.com/ashdejesus)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourusername)
+<!-- LinkedIn removed: no LinkedIn account -->
+- X: [@yoboyikoy](https://x.com/yoboyikoy)
 
 ## 📄 License
 

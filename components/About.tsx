@@ -12,7 +12,7 @@ export default function About() {
         <h2 className="text-lg font-bold">About</h2>
       </div>
       <p className="text-sm text-foreground/70 leading-relaxed">
-        I&apos;m a third-year Computer Science student passionate about web development and software engineering. I build interactive and practical web apps using modern tech stacks, and I enjoy learning by doing — turning concepts from class into real projects on GitHub. I&apos;m focused on refining my skills in frontend and backend development and contributing to meaningful projects as I grow.
+        Versatile and detail-oriented Computer Science student with solid customer service experience and technical literacy. I thrive in fast-paced environments, deliver exceptional service, and resolve customer inquiries effectively. Skilled in high-volume interactions, problem solving, and maintaining professionalism under pressure. Strong communication and adaptability enable me to provide technical support and issue resolution across diverse needs.
       </p>
     </div>
   );

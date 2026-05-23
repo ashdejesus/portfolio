@@ -19,7 +19,7 @@ export default function RecentCertifications() {
           </svg>
           <h2 className="text-lg font-bold">Recent Certifications</h2>
         </div>
-        <a href="#" className="text-black text-xs font-medium">View All ›</a>
+        <a href="#" className="text-foreground text-xs font-medium">View All ›</a>
       </div>
 
       <div className="space-y-3 mt-4">

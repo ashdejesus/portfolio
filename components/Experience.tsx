@@ -11,29 +11,24 @@ interface ExperienceItem {
 export default function Experience() {
   const experiences: ExperienceItem[] = [
     {
-      title: "3rd Year Computer Science Student",
-      organization: "University Academic Program",
-      year: "2024 – Present",
+      title: "Barista",
+      organization: "CoffeePrint Cafe, Cabuyao, Laguna",
+      year: "March 2025",
     },
     {
-      title: "Full-Stack Development (Self-Taught & Academic Projects)",
-      organization: "GitHub Projects & Independent Learning",
-      year: "2023 – Present",
+      title: "Service Crew",
+      organization: "McDonald's Petron SLEX KM44",
+      year: "Jan 2023 – Mar 2024",
     },
     {
-      title: "Web Development Fundamentals",
-      organization: "HTML, CSS, JavaScript, React",
-      year: "2022 – 2023",
+      title: "Voter Support Assistant (Election Day Worker)",
+      organization: "Local Election Committee / COMELEC",
+      year: "May 2022",
     },
     {
-      title: "Introduction to Programming",
-      organization: "Basic Logic, Problem Solving, First Applications",
-      year: "2021",
-    },
-    {
-      title: "Hello World! 👋🏻",
-      organization: "Wrote my first line of code",
-      year: "2020",
+      title: "Public Relations Officer / Layout Artist",
+      organization: "School Organization",
+      year: "Dec 2025 – Present",
     },
   ];
 
@@ -53,12 +48,12 @@ export default function Experience() {
           <div key={index} className="relative pl-6 group">
             <div className={`absolute left-0 top-1.5 w-3 h-3 rounded-full border-2 transition-all duration-300 ${
               index === 0 
-                ? "border-black bg-black" 
-                : "border-border bg-background hover:border-black hover:bg-black"
+                ? "border-foreground bg-foreground" 
+                : "border-border bg-background hover:border-foreground hover:bg-foreground"
             }`}></div>
             <div className="space-y-0.5">
               <h3 className={`text-sm font-semibold transition-colors ${
-                index === 0 ? "text-black" : "group-hover:text-black"
+                index === 0 ? "text-foreground" : "group-hover:text-foreground"
               }`}>
                 {exp.title}
               </h3>

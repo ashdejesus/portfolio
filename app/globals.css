@@ -4,12 +4,37 @@
 
 :root {
   --background: #ffffff;
+  --background-rgb: 255 255 255;
   --foreground: #1a1a1a;
+  --foreground-rgb: 26 26 26;
   --primary: #000000;
+  --primary-rgb: 0 0 0;
   --secondary: #7c3aed;
+  --secondary-rgb: 124 58 237;
   --accent: #000000;
+  --accent-rgb: 0 0 0;
   --border: #e0e0e0;
+  --border-rgb: 224 224 224;
   --muted: #999999;
+  --muted-rgb: 153 153 153;
+}
+
+/* Dark theme variables when `.dark` class is present on <html> or <body> */
+.dark {
+  --background: #0b1220;
+  --background-rgb: 11 18 32;
+  --foreground: #e6eef8;
+  --foreground-rgb: 230 238 248;
+  --primary: #60a5fa;
+  --primary-rgb: 96 165 250;
+  --secondary: #8b5cf6;
+  --secondary-rgb: 139 92 246;
+  --accent: #06b6d4;
+  --accent-rgb: 6 182 212;
+  --border: #1f2937;
+  --border-rgb: 31 41 55;
+  --muted: #9ca3af;
+  --muted-rgb: 156 163 175;
 }
 
 * {
@@ -57,7 +82,7 @@ body {
   }
 
   .bento-card:hover {
-    @apply border-black/20 shadow-lg;
+    @apply border-foreground/20 shadow-lg;
   }
 
   .animate-fade-in {
@@ -232,20 +257,20 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f9fafb;
+  background: var(--background);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #d1d5db;
+  background: var(--border);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #9ca3af;
+  background: var(--muted);
 }
 
 /* Selection */
 ::selection {
-  background: rgba(37, 99, 235, 0.2);
-  color: #1a1a1a;
+  background: color-mix(in srgb, var(--primary) 18%, transparent);
+  color: var(--foreground);
 }
