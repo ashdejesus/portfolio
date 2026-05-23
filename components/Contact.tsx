@@ -15,17 +15,17 @@ export default function Contact() {
             <p className="text-xs text-foreground/70 font-medium">A member of</p>
           </div>
           <div className="space-y-1 flex flex-col h-full">
-            <a target="_blank" rel="noopener noreferrer" className="block p-2.5 rounded-lg border border-foreground/10 hover:bg-foreground/5 transition-all duration-200 hover:-translate-y-0.5 group flex-1" href="https://www.aap.ph">
+            <a target="_blank" rel="noopener noreferrer" className="block p-2.5 rounded-lg border border-foreground/10 hover:bg-foreground/5 transition-all duration-200 hover:-translate-y-0.5 group flex-1" href="https://www.facebook.com/iddc.aca">
               <div className="flex items-start justify-between gap-1 h-full">
-                <p className="text-[10px] font-medium leading-tight text-foreground group-hover:text-foreground transition-colors">Analytics &amp; Artificial Intelligence Association of the Philippines (AAP)</p>
+                <p className="text-[10px] font-medium leading-tight text-foreground group-hover:text-foreground transition-colors">Indak Dangal Dance Company (iddc.aca)</p>
                 <svg className="w-2.5 h-2.5 text-foreground/50 transition-transform group-hover:translate-x-0.5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                 </svg>
               </div>
             </a>
-            <a target="_blank" rel="noopener noreferrer" className="block p-2.5 rounded-lg border border-foreground/10 hover:bg-foreground/5 transition-all duration-200 hover:-translate-y-0.5 group flex-1" href="https://www.psia.org.ph">
+            <a target="_blank" rel="noopener noreferrer" className="block p-2.5 rounded-lg border border-foreground/10 hover:bg-foreground/5 transition-all duration-200 hover:-translate-y-0.5 group flex-1" href="https://www.facebook.com/ACSS.PNC">
               <div className="flex items-start justify-between gap-1 h-full">
-                <p className="text-[10px] font-medium leading-tight text-foreground group-hover:text-foreground transition-colors">Philippine Software Industry Association</p>
+                <p className="text-[10px] font-medium leading-tight text-foreground group-hover:text-foreground transition-colors">Association of Computer Science Students - PNC (ACSS.PNC)</p>
                 <svg className="w-2.5 h-2.5 text-foreground/50 transition-transform group-hover:translate-x-0.5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                 </svg>
