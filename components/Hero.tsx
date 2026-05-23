@@ -28,7 +28,7 @@ export default function Hero() {
       <div className="flex items-center gap-4 md:gap-6">
         {/* Profile Image */}
         <Image
-          src="/pfp.JPEG"
+          src="/PFP.JPEG"
           alt="Nichoe Ashley De Jesus"
           width={160}
           height={160}
