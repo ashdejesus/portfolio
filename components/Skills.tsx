@@ -4,10 +4,11 @@ import React from "react";
 
 export default function Skills() {
   const skills = {
-    "Customer Service": ["Active Listening", "Conflict Resolution", "Customer Satisfaction", "Issue Resolution"],
-    Communication: ["Verbal Communication", "Copywriting", "Professionalism", "Patience"],
-    Technical: ["Technical Literacy", "Computer Proficiency", "Data Entry", "Tech Troubleshooting", "Graphic Design"],
-    Organization: ["Time Management", "High-Speed Prioritization", "Cross-Functional Teamwork", "Adaptability"],
+    Frontend: ["JavaScript", "HTML", "CSS", "React", "Tailwind CSS"],
+    "Libraries & Frameworks": ["React", "Tailwind CSS"],
+    "Backend & Tools": ["Firebase", "Supabase", "Git", "GitHub"],
+    Languages: ["JavaScript", "Java"],
+    Additional: ["RESTful APIs", "Responsive UI", "Project Workflows"],
   };
 
   return (

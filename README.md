@@ -14,13 +14,31 @@ A modern, professional portfolio website built with Next.js 15, React 19, TypeSc
 
 ## 🚀 Tech Stack
 
-- **Framework**: Next.js 15 (App Router)
-- **UI Library**: React 19
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **Icons**: React Icons
-- **Deployment**: Vercel (recommended)
+### Frontend
+- JavaScript
+- HTML
+- CSS
+- React
+- Tailwind CSS
+
+### Libraries & Frameworks
+- React
+- Tailwind CSS
+
+### Backend & Tools
+- Firebase
+- Supabase
+- Git
+- GitHub
+
+### Languages
+- JavaScript
+- Java
+
+### Additional
+- RESTful APIs
+- Responsive UI
+- Project Workflows
 
 ## 📁 Project Structure
 
