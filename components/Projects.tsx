@@ -33,7 +33,7 @@ export default function Projects() {
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
-          <h2 className="text-xl md:text-2xl font-bold text-foreground">Recent Projects</h2>
+          <h2 className="text-lg md:text-xl font-bold text-foreground">Recent Projects</h2>
         </div>
         <a href="#" className="text-foreground text-xs font-medium">View All ›</a>
       </div>

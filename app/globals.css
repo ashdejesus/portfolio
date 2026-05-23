@@ -2,6 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fonts copied from bryllim.com (referenced remotely) */
+@font-face {
+  font-family: "__openRunde_bc356b";
+  src: url("https://bryllim.com/_next/static/media/648293620770408b-s.p.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "__openRunde_bc356b";
+  src: url("https://bryllim.com/_next/static/media/49fce7c6966c54d3-s.p.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "__openRunde_bc356b";
+  src: url("https://bryllim.com/_next/static/media/1bb87caddaaf6c2d-s.p.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "__openRunde_bc356b";
+  src: url("https://bryllim.com/_next/static/media/5bd95970c700f5bd-s.p.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "__geistSans_1e4310";
+  src: url("https://bryllim.com/_next/static/media/4473ecc91f70f139-s.p.woff") format("woff");
+  font-display: swap;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "__geistMono_c3aa02";
+  src: url("https://bryllim.com/_next/static/media/463dafcda517f24f-s.p.woff") format("woff");
+  font-display: swap;
+  font-weight: 100 900;
+}
+
+
 :root {
   --background: #ffffff;
   --background-rgb: 255 255 255;
@@ -17,12 +58,15 @@
   --border-rgb: 224 224 224;
   --muted: #999999;
   --muted-rgb: 153 153 153;
+  --font-open-runde: "__openRunde_bc356b", "__openRunde_Fallback_bc356b";
+  --font-geist: "__geistSans_1e4310", "__geistSans_Fallback_1e4310";
+  --font-geist-mono: "__geistMono_c3aa02", "__geistMono_Fallback_c3aa02";
 }
 
 /* Dark theme variables when `.dark` class is present on <html> or <body> */
 .dark {
-  --background: #0b1220;
-  --background-rgb: 11 18 32;
+  --background: #000000;
+  --background-rgb: 0 0 0;
   --foreground: #e6eef8;
   --foreground-rgb: 230 238 248;
   --primary: #60a5fa;
@@ -50,7 +94,7 @@ html {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--font-open-runde), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

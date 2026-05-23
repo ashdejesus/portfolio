@@ -32,6 +32,28 @@ export default function Experience() {
     },
   ];
 
+  // parse year/month strings to a comparable numeric value (YYYYMM). "Present" => very large
+  const monthMap: Record<string, number> = {
+    jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6,
+    jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12,
+  };
+
+  function parseDateValue(str: string) {
+    const s = str.toLowerCase();
+    if (s.includes("present")) return 999999;
+    // try to find an end date after a dash
+    const rangeSep = s.includes("–") ? "–" : s.includes("-") ? "-" : null;
+    const target = rangeSep ? s.split(rangeSep)[1].trim() : s;
+    // look for month and year
+    const m = target.match(/(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\w*/i);
+    const y = target.match(/(20\d{2}|19\d{2})/);
+    const year = y ? parseInt(y[0], 10) : 0;
+    const month = m ? monthMap[m[0].slice(0,3).toLowerCase()] : 1;
+    return year * 100 + month;
+  }
+
+  const sorted = [...experiences].sort((a, b) => parseDateValue(b.year) - parseDateValue(a.year));
+
   return (
     <section className="bento-card p-4 space-y-2 group col-span-1 md:col-span-2 md:row-span-2">
       <div className="flex items-center gap-2 mb-3">
@@ -44,16 +66,11 @@ export default function Experience() {
       <div className="relative space-y-10 mt-3">
         <div className="absolute left-1.5 top-2 bottom-0 w-px bg-border"></div>
 
-        {experiences.map((exp, index) => (
-          <div key={index} className="relative pl-6 group">
-            <div className={`absolute left-0 top-1.5 w-3 h-3 rounded-full border-2 transition-all duration-300 ${
-              index === 0 
-                ? "border-foreground bg-foreground" 
-                : "border-border bg-background hover:border-foreground hover:bg-foreground"
-            }`}></div>
-            <div className="space-y-0.5">
+        {sorted.map((exp, index) => (
+          <div key={index} className="relative pl-6">
+            <div className="space-y-0.5 peer">
               <h3 className={`text-sm font-semibold transition-colors ${
-                index === 0 ? "text-foreground" : "group-hover:text-foreground"
+                index === 0 ? "text-foreground" : "peer-hover:text-foreground"
               }`}>
                 {exp.title}
               </h3>
@@ -64,6 +81,11 @@ export default function Experience() {
                 </span>
               </div>
             </div>
+            <div className={`absolute left-0 top-1.5 w-3 h-3 rounded-full border-2 transition-colors duration-200 ${
+              index === 0
+                ? "border-foreground bg-foreground"
+                : "border-border bg-background peer-hover:border-foreground peer-hover:bg-foreground"
+            }`}></div>
           </div>
         ))}
       </div>

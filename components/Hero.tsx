@@ -28,7 +28,7 @@ export default function Hero() {
       <div className="flex items-center gap-4 md:gap-6">
         {/* Profile Image */}
         <Image
-          src="/pfp.jpeg"
+          src="/pfp.JPEG"
           alt="Nichoe Ashley De Jesus"
           width={160}
           height={160}
@@ -78,7 +78,7 @@ export default function Hero() {
 
           {/* Title */}
           <div className="flex items-center justify-between mt-1.5 md:mt-2">
-            <p className="text-[10px] md:text-base">3rd Year Computer Science Student <span className="text-foreground/40">\</span> Aspiring Full-Stack Developer</p>
+            <p className="text-[10px] md:text-base">Computer Science Student <span className="text-foreground/40">\</span> Aspiring Full-Stack Developer</p>
             <div className="hidden md:block">
               {/* Hackathon badge would go here */}
             </div>

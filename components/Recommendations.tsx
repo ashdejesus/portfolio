@@ -4,14 +4,22 @@ import React, { useState } from "react";
 
 const recommendationsData = [
   {
-    text: "Bryl and I worked together on several projects where I witnessed his tenacity and reliability. He consistently met deadlines without sacrificing quality and often exceeded expectations. His dedication to his craft, eagerness to learn new technologies, and collaborative attitude made him a valuable member of the team. I highly recommend him for any software development role.",
-    author: "Van Honoridez",
-    role: "Application Development Analyst at Accenture"
+    text: `I highly recommend Nichoe Ashley B. De Jesus for any opportunity given to them. They are hardworking, adaptable, and consistently show professionalism in every task. Their strong communication skills, customer service experience, and dedication make them a valuable addition to any team.
+
+Recommender Name
+
+Position, Organization`,
+    author: "Recommender Name",
+    role: "Position, Organization"
   },
   {
-    text: "Was an intern at PocketDevs and sir Bryl was our main trainer to the different technologies we use in the company such as Laravel, Bootstrap, etc. With his guidance, I was equipped with some of the current trends and insights in the tech industry which enabled me.",
-    author: "Patrick Vince Velasco",
-    role: "Software Engineer, YNS"
+    text: `Nichoe Ashley B. De Jesus is a reliable and motivated individual who demonstrates excellent work ethic and teamwork. Their ability to handle responsibilities efficiently while maintaining professionalism reflects their strong potential for future success.
+
+Recommender Name
+
+Position, Organization`,
+    author: "Recommender Name",
+    role: "Position, Organization"
   }
 ];
 

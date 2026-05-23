@@ -3,10 +3,10 @@
 import React from "react";
 
 const certificationsData = [
-  { title: "Huawei Developer Expert", org: "Huawei" },
-  { title: "Generative AI Leader", org: "Google" },
-  { title: "Software Engineering", org: "TestDome" },
-  { title: "Generative AI Professional", org: "Oracle" }
+  { title: "Placeholder Certification 1", org: "Issuing Organization" },
+  { title: "Placeholder Certification 2", org: "Issuing Organization" },
+  { title: "Placeholder Certification 3", org: "Issuing Organization" },
+  { title: "Placeholder Certification 4", org: "Issuing Organization" },
 ];
 
 export default function RecentCertifications() {
