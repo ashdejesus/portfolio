@@ -43,15 +43,15 @@ export default function Gallery() {
 
       <div className="relative">
         <div className="relative overflow-hidden">
-          <div className="flex gap-2 transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 0}px)` }}>
+          <div className="flex gap-2 transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * (100 / images.length)}%)` }}>
             {images.map((img, idx) => (
-              <div key={idx} className="relative flex-shrink-0 aspect-square overflow-hidden rounded-lg bg-foreground/5 border border-foreground/10 hover:border-foreground/20 transition-all duration-200 hover:-translate-y-0.5 group/image" style={{ width: "calc((100% - 2rem) / 5)" }}>
+              <div key={idx} className="relative flex-shrink-0 aspect-square overflow-hidden rounded-lg bg-foreground/5 border border-foreground/10 hover:border-foreground/20 transition-all duration-200 hover:-translate-y-0.5 group/image w-full sm:w-1/2 md:w-1/3 lg:w-1/5">
                 <Image
                   alt={`Gallery image ${idx + 1}`}
                   src={img}
                   fill
                   className="object-cover transition-transform duration-200 group-hover/image:scale-105"
-                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
                 />
               </div>
             ))}
@@ -60,8 +60,7 @@ export default function Gallery() {
 
         <button
           onClick={prevSlide}
-          disabled={currentIndex === 0}
-          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 md:-translate-x-6 z-10 p-2 rounded-full bg-background border border-foreground/10 hover:border-foreground/20 hover:bg-foreground/5 transition-all duration-200 hover:scale-110 shadow-sm opacity-50 cursor-not-allowed"
+          className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 md:-translate-x-6 z-10 p-2 rounded-full bg-background border border-foreground/10 hover:border-foreground/20 hover:bg-foreground/5 transition-all duration-200 hover:scale-110 shadow-sm ${currentIndex === 0 ? 'opacity-50' : 'opacity-100'}`}
           aria-label="Previous image"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

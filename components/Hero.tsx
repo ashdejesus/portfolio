@@ -25,19 +25,19 @@ export default function Hero() {
 
   return (
     <section className="mb-8 animate-fade-in">
-      <div className="flex items-center gap-4 md:gap-6">
+      <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6">
         {/* Profile Image */}
         <Image
-          src="/PFP.JPEG"
+          src="/pfp.JPEG"
           alt="Nichoe Ashley De Jesus"
           width={160}
           height={160}
-          className="rounded-lg w-40 h-40 md:w-40 md:h-40 object-cover flex-shrink-0"
+          className="rounded-lg w-28 h-28 md:w-40 md:h-40 object-cover flex-shrink-0"
           priority
         />
 
         {/* Content */}
-        <div className="flex-1 min-w-0">
+        <div className="flex-1 min-w-0 w-full">
           {/* Name and Verified Badge */}
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
@@ -86,7 +86,7 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="space-y-2 mt-3 md:mt-4">
-            <div className="flex gap-2">
+            <div className="flex flex-col sm:flex-row gap-2 w-full">
               <a
                 download
                 className="inline-flex h-7 md:h-8 items-center rounded-lg bg-foreground px-2.5 md:px-4 text-[8px] md:text-xs font-medium text-background transition-all duration-200 hover:bg-foreground/90 hover:-translate-y-0.5 gap-1 md:gap-1.5 whitespace-nowrap min-h-0"
@@ -106,7 +106,7 @@ export default function Hero() {
                 </svg>
                 <span className="text-left">Send Email</span>
               </a>
-              <a className="inline-flex h-7 md:h-8 items-center rounded-lg border border-border bg-background px-2.5 md:px-4 text-[8px] md:text-xs font-medium transition-all duration-200 hover:bg-muted hover:-translate-y-0.5 gap-1 md:gap-1.5 whitespace-nowrap flex-1 md:flex-1 min-h-0" href="#">
+              <a className="inline-flex h-7 md:h-8 items-center rounded-lg border border-border bg-background px-2.5 md:px-4 text-[8px] md:text-xs font-medium transition-all duration-200 hover:bg-muted hover:-translate-y-0.5 gap-1 md:gap-1.5 whitespace-nowrap w-full md:w-auto min-h-0" href="#">
                 <svg className="w-3.5 h-3.5 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                 </svg>
