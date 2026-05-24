@@ -12,7 +12,7 @@ export default function About() {
         <h2 className="text-lg font-bold">About</h2>
       </div>
       <p className="text-sm text-foreground/70 leading-relaxed">
-        I'm a Computer Science student with experience in customer service, technical support, graphic design, and organizational leadership. I work on projects involving software development, digital publication materials, and community-based initiatives while continuously improving my skills in programming and technology.
+        I&apos;m a Computer Science student with experience in customer service, technical support, graphic design, and organizational leadership. I work on projects involving software development, digital publication materials, and community-based initiatives while continuously improving my skills in programming and technology.
 
         <br /><br />
 
