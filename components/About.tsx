@@ -12,7 +12,15 @@ export default function About() {
         <h2 className="text-lg font-bold">About</h2>
       </div>
       <p className="text-sm text-foreground/70 leading-relaxed">
-        Versatile and detail-oriented Computer Science student with solid customer service experience and technical literacy. I thrive in fast-paced environments, deliver exceptional service, and resolve customer inquiries effectively. Skilled in high-volume interactions, problem solving, and maintaining professionalism under pressure. Strong communication and adaptability enable me to provide technical support and issue resolution across diverse needs.
+        I'm a Computer Science student with experience in customer service, technical support, graphic design, and organizational leadership. I work on projects involving software development, digital publication materials, and community-based initiatives while continuously improving my skills in programming and technology.
+
+        <br /><br />
+
+        I have contributed to student organizations through public relations, publication design, and communication management, helping improve engagement and online presence. I also gained real-world experience in fast-paced environments through customer service and operational roles that strengthened my adaptability, problem-solving, and teamwork skills.
+
+        <br /><br />
+
+        Currently, I am focusing on software engineering and artificial intelligence through my research project, SafeRide: A Mobile-Based Risk Scoring System for Student Commuting. My work explores the use of smartphone sensors, crowdsourced reports, and intelligent risk analysis to develop safer and smarter commuting solutions for students.
       </p>
     </div>
   );

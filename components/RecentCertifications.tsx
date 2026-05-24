@@ -1,13 +1,8 @@
 "use client";
 
 import React from "react";
-
-const certificationsData = [
-  { title: "Placeholder Certification 1", org: "Issuing Organization" },
-  { title: "Placeholder Certification 2", org: "Issuing Organization" },
-  { title: "Placeholder Certification 3", org: "Issuing Organization" },
-  { title: "Placeholder Certification 4", org: "Issuing Organization" },
-];
+import Link from "next/link";
+import { certificationsData } from "@/lib/certifications";
 
 export default function RecentCertifications() {
   return (
@@ -19,7 +14,7 @@ export default function RecentCertifications() {
           </svg>
           <h2 className="text-lg font-bold">Recent Certifications</h2>
         </div>
-        <a href="#" className="text-foreground text-xs font-medium">View All ›</a>
+        <Link href="/certifications" className="text-foreground text-xs font-medium">View All ›</Link>
       </div>
 
       <div className="space-y-3 mt-4">

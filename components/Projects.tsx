@@ -1,31 +1,12 @@
 "use client";
 
 import React from "react";
-
-const projectsData = [
-  {
-    title: "NoteSphere",
-    description: "A JavaScript-powered notes web app built to practice dynamic UI and state management. Features include creating, editing, and organizing notes with an intuitive interface.",
-    url: "https://github.com/ashdejesus"
-  },
-  {
-    title: "unicart",
-    description: "A JavaScript e-commerce and cart prototype demonstrating interactive DOM manipulation and client-side logic for product management and shopping cart functionality.",
-    url: "https://github.com/ashdejesus"
-  },
-  {
-    title: "sulatinmo",
-    description: "An HTML site project showcasing static markup, layout design, and content presentation skills with clean semantic HTML structure.",
-    url: "https://github.com/ashdejesus"
-  },
-  {
-    title: "cultura-lens",
-    description: "A TypeScript-based project tied to image restoration concepts, demonstrating type safety and modern JavaScript development practices.",
-    url: "https://github.com/ashdejesus"
-  }
-];
+import Link from "next/link";
+import { projectsData } from "@/lib/projects";
 
 export default function Projects() {
+  const recentProjects = projectsData.slice(0, 4);
+
   return (
     <section className="bento-card p-4 space-y-4 group col-span-1 md:col-span-4">
       <div className="flex items-center justify-between mb-4">
@@ -35,11 +16,11 @@ export default function Projects() {
           </svg>
           <h2 className="text-lg md:text-xl font-bold text-foreground">Recent Projects</h2>
         </div>
-        <a href="#" className="text-foreground text-xs font-medium">View All ›</a>
+        <Link href="/projects" className="text-foreground text-xs font-medium">View All ›</Link>
       </div>
 
       <div className="grid md:grid-cols-2 gap-4">
-        {projectsData.map((project, idx) => (
+        {recentProjects.map((project, idx) => (
           <a
             key={idx}
             href={project.url}
