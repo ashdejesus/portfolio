@@ -12,7 +12,7 @@ export default function Experience() {
   const experiences: ExperienceItem[] = [
     {
       title: "Service Crew",
-      organization: "McDonald's Petron SLEX KM44",
+      organization: "McDonalds Petron SLEX KM44",
       year: "Jan 2023 – Mar 2024",
     },
     {
