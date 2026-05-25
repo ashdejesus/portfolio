@@ -27,6 +27,15 @@
   font-display: swap;
   font-weight: 700;
 }
+/* Fallback for Open Runde — matches bryllim.com metric overrides to prevent layout shift */
+@font-face {
+  font-family: "__openRunde_Fallback_bc356b";
+  src: local("Arial");
+  ascent-override: 90.00%;
+  descent-override: 22.43%;
+  line-gap-override: 0.00%;
+  size-adjust: 107.64%;
+}
 
 @font-face {
   font-family: "__geistSans_1e4310";
@@ -34,12 +43,30 @@
   font-display: swap;
   font-weight: 100 900;
 }
+/* Fallback for Geist Sans */
+@font-face {
+  font-family: "__geistSans_Fallback_1e4310";
+  src: local("Arial");
+  ascent-override: 85.83%;
+  descent-override: 20.52%;
+  line-gap-override: 9.33%;
+  size-adjust: 107.19%;
+}
 
 @font-face {
   font-family: "__geistMono_c3aa02";
   src: url("https://bryllim.com/_next/static/media/463dafcda517f24f-s.p.woff") format("woff");
   font-display: swap;
   font-weight: 100 900;
+}
+/* Fallback for Geist Mono */
+@font-face {
+  font-family: "__geistMono_Fallback_c3aa02";
+  src: local("Arial");
+  ascent-override: 69.97%;
+  descent-override: 16.73%;
+  line-gap-override: 7.61%;
+  size-adjust: 131.49%;
 }
 
 
@@ -58,9 +85,9 @@
   --border-rgb: 224 224 224;
   --muted: #999999;
   --muted-rgb: 153 153 153;
-  --font-open-runde: "__openRunde_bc356b", "__openRunde_Fallback_bc356b";
-  --font-geist: "__geistSans_1e4310", "__geistSans_Fallback_1e4310";
-  --font-geist-mono: "__geistMono_c3aa02", "__geistMono_Fallback_c3aa02";
+  --font-open-runde: "__openRunde_bc356b", "__openRunde_Fallback_bc356b", ui-sans-serif, system-ui, sans-serif;
+  --font-geist: "__geistSans_1e4310", "__geistSans_Fallback_1e4310", ui-sans-serif, system-ui, sans-serif;
+  --font-geist-mono: "__geistMono_c3aa02", "__geistMono_Fallback_c3aa02", ui-monospace, monospace;
 }
 
 /* Dark theme variables when `.dark` class is present on <html> or <body> */
@@ -318,3 +345,8 @@ body {
   background: color-mix(in srgb, var(--primary) 18%, transparent);
   color: var(--foreground);
 }
+
+/* Hide scrollbar inside the gallery strip */
+[data-gallery-scroll]::-webkit-scrollbar {
+  display: none;
+}

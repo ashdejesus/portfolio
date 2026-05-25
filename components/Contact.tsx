@@ -97,7 +97,7 @@ export default function Contact() {
               </div>
               <p className="text-[9px] font-medium text-foreground group-hover:text-foreground transition-colors">dejesusnichoeashley81@gmail.com</p>
             </a>
-            <a download className="group p-1.5 rounded-md border border-foreground/10 hover:bg-foreground/5 transition-all duration-200 hover:-translate-y-0.5 block" href="/resume.pdf">
+            <a download className="group p-1.5 rounded-md border border-foreground/10 hover:bg-foreground/5 transition-all duration-200 hover:-translate-y-0.5 block" href="/api/resume">
               <div className="flex items-center gap-1 mb-0.5">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>

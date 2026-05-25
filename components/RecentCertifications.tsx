@@ -21,7 +21,7 @@ export default function RecentCertifications() {
         {certificationsData.map((cert, idx) => (
           <div key={idx} className="pb-3 border-b border-border last:border-b-0 last:pb-0">
             <p className="font-semibold text-foreground text-sm">{cert.title}</p>
-            <p className="text-foreground/60 text-xs mt-0.5">{cert.org}</p>
+            <p className="text-foreground font-medium text-xs mt-0.5">{cert.org}</p>
           </div>
         ))}
       </div>
