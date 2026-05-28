@@ -22,7 +22,7 @@ const itemVariants = {
 
 export default function TechStackPageClient() {
   return (
-    <motion.main className="min-h-screen text-foreground" initial="hidden" animate="show" variants={containerVariants}>
+    <motion.main className="min-h-screen bg-background text-foreground" initial="hidden" animate="show" variants={containerVariants}>
       <div className="mx-auto max-w-5xl px-6 py-12">
         <motion.div className="mb-8" variants={itemVariants}>
           <div className="flex items-center gap-6">
@@ -39,7 +39,7 @@ export default function TechStackPageClient() {
               <h3 className="text-lg font-semibold mb-3">{group.category}</h3>
               <div className="flex flex-wrap gap-3">
                 {group.items.map((item) => (
-                  <span key={item} className="px-3 py-1 text-sm rounded-md bg-black border border-gray-700 text-white font-medium">{item}</span>
+                  <span key={item} className="px-3 py-1 text-sm rounded-md bg-foreground/10 border border-border text-foreground font-medium">{item}</span>
                 ))}
               </div>
             </motion.div>

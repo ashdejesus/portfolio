@@ -1,27 +1,11 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
+import { useTheme } from "@/components/ThemeProvider";
 
 export default function Hero() {
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    try {
-      const stored = localStorage.getItem('theme');
-      if (stored) {
-        const prefer = stored === 'dark';
-        setIsDark(prefer);
-        document.documentElement.classList.toggle('dark', prefer);
-        return;
-      }
-    } catch {}
-
-    // fallback to system preference
-    const prefersDark = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setIsDark(prefersDark);
-    document.documentElement.classList.toggle('dark', prefersDark);
-  }, []);
+  const { isDark, toggleTheme } = useTheme();
 
   return (
     <section className="mb-8 animate-fade-in">
@@ -47,14 +31,7 @@ export default function Hero() {
               </svg>
             </div>
             <button
-              onClick={() => {
-                const next = !isDark;
-                setIsDark(next);
-                try {
-                  localStorage.setItem('theme', next ? 'dark' : 'light');
-                } catch {}
-                document.documentElement.classList.toggle('dark', next);
-              }}
+              onClick={toggleTheme}
               aria-pressed={isDark}
               className={`relative inline-flex h-6 w-11 items-center rounded-full transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 min-h-0 min-w-0 ${isDark ? 'bg-gray-700' : 'bg-gray-300'}`}
               aria-label="Toggle theme"
